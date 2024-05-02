@@ -1,0 +1,48 @@
+INSERT INTO Login (login_id, login_username, login_password)
+VALUES
+(1, 'lavanya123', 'Sunrisers'),
+(2, 'varuntej456', 'Royal challengers'),
+(3, 'alluarjun789', 'Super kings');
+
+INSERT INTO User (user_id, user_name, user_mobile, user_email, user_address)
+VALUES
+(1, 'Lavanya', '1234567890', 'lavanya.123@gmail.com', 'ABC St, XYZ City'),
+(2, 'Varun tej', '9876543210', 'Varun.456@gmail.com', 'XYZ St, ABC City'),
+(3, 'Allu arjun', '5555555555', 'Allu.789@gmail.com', 'CSK St, RCB City');
+
+INSERT INTO Roles (role_id, role_name, role_desc)
+VALUES
+(1, 'Admin', 'Administrator Role'),
+(2, 'Conductor', 'Conductor Role'),
+(3, 'Customer', 'Customer Role');
+
+INSERT INTO Permissions (per_id, per_role_id, per_module, per_name)
+VALUES
+(1, 1, 'Users', 'Manage Users'),
+(2, 2, 'Trains', 'View Train List'),
+(3, 3, 'Tickets', 'Buy Tickets');
+
+INSERT INTO Trains (trn_id, trn_name, trn_num, trn_tckt, trn_type, trn_desc)
+VALUES
+(1, 'Charminar Express', 'CHA101', 200, 'Express', 'High-speed express train'),
+(2, 'Garudavega Train', 'GVT202', 150, 'Local', 'Local commuter train'),
+(3, 'Freight Train', 'FRG303', 100, 'Freight', 'Cargo transport train');
+
+-- Insert data into Timetable table
+INSERT INTO Timetable (tmta_id, trn_id, tmta_type, tmta_desc)
+VALUES
+(1, 1, 'Departure', 'Departure from Vijayawada'),
+(2, 2, 'Departure', 'Departure from Bangalore'),
+(3, 3, 'Departure', 'Departure from Hyderabad');
+
+INSERT INTO Stations (stn_id, stn_name, stn_desc, stn_dis)
+VALUES
+(1, 'Station Vijayawada', 'Main City station', 60),
+(2, 'Station Bangalore', 'Suburban station', 10),
+(3, 'Station Hyderabad', 'Industrial area station', 25);
+
+INSERT INTO Customers (cus_id, cus_name, cus_mobile, cus_add, cus_pass)
+VALUES
+(1, 'Lavanya', '1234567890', 'ABC St, XYZ City', 'Sunrisers'),
+(2, 'Varun tej', '9876543210', 'XYZ St, ABC City', 'Royal challengers'),
+(3, 'Allu arjun', '5555555555', 'CSK St, RCB City', 'Super kings');
