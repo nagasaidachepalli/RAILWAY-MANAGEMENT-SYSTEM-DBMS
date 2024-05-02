@@ -1,0 +1,14 @@
+--Retrieve all the usernames and passwords from the Login table:
+SELECT login_username, login_password FROM Login;
+
+--Filtering data based on a condition:
+SELECT * FROM Trains WHERE trn_type = 'Express';
+
+--Calculate derived data using subqueries:Find the maximum number of tickets available for any train:
+SELECT MAX(trn_tckt) AS max_tickets FROM Trains;
+
+--Sorting data:
+SELECT * FROM Stations ORDER BY stn_name ASC;
+
+--Counting rows:
+SELECT COUNT(*) FROM Customers;
