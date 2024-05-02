@@ -1,0 +1,26 @@
+--View 1: UserLoginInfo
+CREATE VIEW UserLoginInfo AS
+SELECT u.user_id, u.user_name, u.user_email, l.login_username
+FROM user u
+JOIN Login l ON u.user_id = l.login_id;
+
+--View 2: TrainDetails
+CREATE VIEW TrainDetails AS
+SELECT trn_id, trn_name, trn_num, trn_tckt, trn_type, trn_desc
+FROM trains;
+
+--View 3: StationInformation
+CREATE VIEW StationInformation AS
+SELECT stn_id, stn_name, stn_desc, stn_dis
+FROM stations;
+
+--View 4: CustomerDetails
+CREATE VIEW CustomerDetails AS
+SELECT cus_id, cus_name, cus_mobile, cus_add
+FROM customer;
+
+--View 5: RolePermissions
+CREATE VIEW RolePermissions AS
+SELECT r.role_id, r.role_name, r.role_desc, p.per_module, p.per_name
+FROM Roles r
+JOIN permission p ON r.role_id = p.per_role_id;
